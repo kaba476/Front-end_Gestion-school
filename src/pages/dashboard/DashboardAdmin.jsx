@@ -34,7 +34,7 @@ import {
   UserX,
 } from "lucide-react";
 
-// 🛠 Dashboard Admin : vue globale sur les données principales
+// Dashboard Admin : vue globale sur les données principales
 const DashboardAdmin = () => {
   const { user, token, logout } = useAuth();
   const { showError, showSuccess } = useError();
@@ -355,7 +355,7 @@ const DashboardAdmin = () => {
     }
   };
 
-  // 📊 Charger les statistiques avec filtres
+  //  Charger les statistiques avec filtres
   const loadStatistics = async () => {
     try {
       const params = new URLSearchParams();
