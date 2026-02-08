@@ -17,7 +17,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 
-// 🎓 Dashboard Professeur : vue centrée sur ses cours/élèves
+// Dashboard Professeur : vue centrée sur ses cours/élèves
 const DashboardProf = () => {
   const { user, token, logout } = useAuth();
   const { showError, showSuccess } = useError();
@@ -111,7 +111,7 @@ const DashboardProf = () => {
     }
   };
 
-  // 🔔 Charger les étudiants d'un cours sélectionné
+  //  Charger les étudiants d'un cours sélectionné
   const handleCoursChange = async (coursId) => {
     setSelectedCours(coursId);
     if (!coursId) {
@@ -138,7 +138,7 @@ const DashboardProf = () => {
     }
   };
 
-  // 🔔 Changer le statut d'un étudiant dans l'appel
+  //  Changer le statut d'un étudiant dans l'appel
   const handleChangePresence = (eleveId, etat) => {
     setAppelPresences(prev => ({
       ...prev,
@@ -146,7 +146,7 @@ const DashboardProf = () => {
     }));
   };
 
-  // 🔔 Modifier une présence déjà enregistrée (correction après erreur)
+  //  Modifier une présence déjà enregistrée (correction après erreur)
   const handleUpdatePresence = async (presenceId, nouvelEtat) => {
     setUpdatingPresenceId(presenceId);
     try {
@@ -164,7 +164,7 @@ const DashboardProf = () => {
     }
   };
 
-  // 🔔 Valider l'appel (créer toutes les présences)
+  //  Valider l'appel (créer toutes les présences)
   const handleValiderAppel = async () => {
     if (!selectedCours || !dateAppel) {
       showError("Veuillez sélectionner un cours et une date.");
@@ -914,7 +914,7 @@ const DashboardProf = () => {
                           e.currentTarget.style.backgroundColor = '#3b82f6';
                         }}
                       >
-                        ✅ Valider l'appel
+                         Valider l'appel
                       </button>
                     </>
                   )}
