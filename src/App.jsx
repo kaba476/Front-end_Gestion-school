@@ -7,7 +7,7 @@ import DashboardEleve from "./pages/dashboard/DashboardEleve";
 import DashboardAdmin from "./pages/dashboard/DashboardAdmin";
 import DashboardProf from "./pages/dashboard/DashboardProf";
 
-// 🔐 Route protégée par rôle
+// Route protégée par rôle
 // On vérifie qu'un user est connecté ET qu'il a le bon rôle.
 const PrivateRouteByRole = ({ element, role, user, loading }) => {
   if (loading) return null; // on évite de flasher la page pendant le chargement initial
