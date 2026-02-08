@@ -41,7 +41,7 @@ export default function DashboardEleve() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  // 🔄 Chargement des données
+  //  Chargement des données
   useEffect(() => {
     const fetchData = async () => {
       if (!token) return;
@@ -75,7 +75,7 @@ export default function DashboardEleve() {
     fetchData();
   }, [token, showError]);
 
-  // 📨 Envoi d'une justification
+  //  Envoi d'une justification
   const handleSendJustification = async (presenceId) => {
     const motif = justificationTexts[presenceId] || "";
     if (!motif.trim()) {
@@ -105,7 +105,7 @@ export default function DashboardEleve() {
     }
   };
 
-  // ✅ Marquer une alerte comme lue
+  //  Marquer une alerte comme lue
   const handleMarkAlerteLu = async (alerteId) => {
     try {
       await api.patch(`/alertes/${alerteId}/lu`, {}, token);
