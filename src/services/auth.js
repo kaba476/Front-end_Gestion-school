@@ -1,4 +1,4 @@
-// 🔐 Fonctions utilitaires liées à l'authentification côté front
+//  Fonctions utilitaires liées à l'authentification côté front
 // On s'appuie sur l'API backend /api/users/login qui renvoie
 // l'utilisateur + un token JWT.
 
